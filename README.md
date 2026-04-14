@@ -69,49 +69,6 @@ go build -o portfolio ./cmd/server
 
 ---
 
-## Deploy ke VPS / Render / Fly.io
-
-### VPS (systemd)
-
-```bash
-go build -o portfolio ./cmd/server
-```
-
-```ini
-[Unit]
-Description=Marsel Portfolio
-After=network.target
-
-[Service]
-ExecStart=/home/ubuntu/portfolio/portfolio
-WorkingDirectory=/home/ubuntu/portfolio
-Restart=always
-Environment=PORT=8080
-
-[Install]
-WantedBy=multi-user.target
-```
-
-```bash
-sudo systemctl enable --now portfolio
-```
-
-### Render.com
-
-1. Push repo ke GitHub
-2. New Web Service → pilih repo ini
-3. **Build Command:** `go build -o portfolio ./cmd/server`
-4. **Start Command:** `./portfolio`
-5. Set env var `PORT` jika perlu (Render auto-inject $PORT)
-
-### Fly.io
-
-```bash
-fly launch && fly deploy
-```
-
----
-
 ## Kontak
 
 - Email: marsellrulianaa@gmail.com
