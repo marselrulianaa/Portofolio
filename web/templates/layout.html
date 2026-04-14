@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Marsel Ruliana Hermawan — Backend Golang &amp; UI/UX Designer. Membangun sistem backend yang cepat, aman, dan mudah di-scale dengan desain UI/UX yang rapi." />
+		<meta
+			property="og:title"
+			content="Marsel Ruliana Hermawan — Backend Golang &amp; UI/UX Designer" />
+		<meta
+			property="og:description"
+			content="Membangun sistem backend yang cepat, aman, dan mudah di-scale — dengan desain UI/UX yang rapi." />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/static/img/avatar.svg" />
+		<title>Marsel Ruliana Hermawan — Backend Golang &amp; UI/UX Designer</title>
+		<link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg" />
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar" role="navigation" aria-label="Main navigation">
+			<div class="container nav-inner">
+				<a
+					href="#hero"
+					class="nav-brand"
+					aria-label="Marsel Ruliana Hermawan — Home">
+					<span class="brand-text">MRH<span class="brand-dot">.</span></span>
+				</a>
+				<ul class="nav-links" role="list">
+					<li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
+					<li><a href="#skills" data-i18n="nav.skills">Keahlian</a></li>
+					<li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+					<li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+				</ul>
+				<div class="nav-right">
+					<button
+						class="lang-toggle"
+						id="langToggle"
+						aria-label="Switch language"
+						aria-pressed="false">
+						<span class="lang-id active">ID</span>
+						<span class="lang-sep">/</span>
+						<span class="lang-en">EN</span>
+					</button>
+					<button
+						class="nav-cta"
+						onclick="
+							document
+								.getElementById('contact')
+								.scrollIntoView({ behavior: 'smooth' })
+						"
+						data-i18n="nav.cta">
+						Hubungi Saya
+					</button>
+					<button
+						class="hamburger"
+						id="hamburger"
+						aria-label="Toggle menu"
+						aria-expanded="false">
+						<span></span><span></span><span></span>
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+			<ul role="list">
+				<li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
+				<li><a href="#skills" data-i18n="nav.skills">Keahlian</a></li>
+				<li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+				<li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+			</ul>
+		</div>
+
+		<main>
+			<!-- Hero Section -->
+			<section
+				id="hero"
+				class="section hero-section"
+				aria-labelledby="hero-heading">
+				<div class="hero-bg-glow" aria-hidden="true"></div>
+				<div class="container hero-inner">
+					<div class="hero-content">
+						<div class="hero-badge" data-i18n="hero.badge">
+							Backend Golang &amp; UI/UX Designer
+						</div>
+						<h1 id="hero-heading" class="hero-title">
+							<span class="greeting" data-i18n="hero.greeting">Halo, saya</span>
+							<span class="hero-name">Marsel Ruliana</span>
+							<span class="hero-name accent-purple">Hermawan</span>
+						</h1>
+						<p class="hero-sub" data-i18n="hero.sub">
+							Saya membangun sistem backend yang cepat, aman, dan mudah di-scale
+							— dengan desain UI/UX yang rapi.
+						</p>
+						<div class="hero-actions">
+							<a href="#contact" class="btn btn-primary" data-i18n="hero.cta1"
+								>Hubungi Saya</a
+							>
+							<a href="#projects" class="btn btn-ghost" data-i18n="hero.cta2"
+								>Lihat Proyek</a
+							>
+						</div>
+						<div class="hero-stats" aria-label="Statistics">
+							<div class="stat-item">
+								<span class="stat-number">3+</span>
+								<span class="stat-label" data-i18n="stat.projects"
+									>Proyek Selesai</span
+								>
+							</div>
+							<div class="stat-divider" aria-hidden="true"></div>
+							<div class="stat-item">
+								<span class="stat-number">2+</span>
+								<span class="stat-label" data-i18n="stat.years"
+									>Tahun Pengalaman</span
+								>
+							</div>
+							<div class="stat-divider" aria-hidden="true"></div>
+							<div class="stat-item">
+								<span class="stat-number">Go+</span>
+								<span class="stat-label" data-i18n="stat.stack"
+									>Stack Andalan</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="hero-visual" aria-hidden="true">
+						<div class="avatar-wrapper">
+							<img
+								src="/static/img/avatar.svg"
+								alt="Marsel Ruliana Hermawan"
+								class="avatar-img"
+								width="280"
+								height="280"
+								loading="eager" />
+							<div class="avatar-ring ring-1"></div>
+							<div class="avatar-ring ring-2"></div>
+						</div>
+						<div class="floating-badge badge-go">
+							<span class="badge-icon">⚡</span>
+							<span>Go</span>
+						</div>
+						<div class="floating-badge badge-ui">
+							<span class="badge-icon">🎨</span>
+							<span>UI/UX</span>
+						</div>
+					</div>
+				</div>
+				<div class="scroll-indicator" aria-hidden="true">
+					<span></span>
+				</div>
+			</section>
+
+			<!-- Projects Section -->
+			<section
+				id="projects"
+				class="section projects-section"
+				aria-labelledby="projects-heading">
+				<div class="container">
+					<div class="section-header">
+						<span class="section-tag" data-i18n="projects.tag">Portfolio</span>
+						<h2
+							id="projects-heading"
+							class="section-title"
+							data-i18n="projects.title">
+							Proyek Unggulan
+						</h2>
+						<p class="section-sub" data-i18n="projects.sub">
+							Beberapa proyek yang telah saya kerjakan dengan penuh dedikasi.
+						</p>
+					</div>
+					<div class="projects-grid">
+						<!-- Project 1 -->
+						<article
+							class="project-card"
+							tabindex="0"
+							aria-label="Project: UI/UX Design Command Center TNI AL">
+							<div class="card-glow" aria-hidden="true"></div>
+							<div class="card-header">
+								<div class="card-icon card-icon--blue" aria-hidden="true">
+									<svg
+										width="28"
+										height="28"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										aria-hidden="true">
+										<rect x="2" y="3" width="20" height="14" rx="2" />
+										<line x1="8" y1="21" x2="16" y2="21" />
+										<line x1="12" y1="17" x2="12" y2="21" />
+									</svg>
+								</div>
+								<span class="card-category" data-i18n="card.uiux"
+									>UI/UX Design</span
+								>
+							</div>
+							<h3 class="card-title">Command Center TNI AL</h3>
+							<p class="card-desc" data-i18n="project1.desc">
+								Desain antarmuka command center untuk keperluan operasional TNI
+								Angkatan Laut — dashboard monitoring, navigasi intuitif, dan
+								visual data real-time.
+							</p>
+							<div class="card-tags" role="list" aria-label="Technologies used">
+								<span class="tag" role="listitem">Figma</span>
+								<span class="tag" role="listitem">UI Design</span>
+								<span class="tag" role="listitem">Dashboard</span>
+								<span class="tag" role="listitem">Military</span>
+							</div>
+							<div class="card-footer">
+								<span class="card-status status--done" data-i18n="status.done"
+									>✓ Selesai</span
+								>
+							</div>
+						</article>
+
+						<!-- Project 2 -->
+						<article
+							class="project-card"
+							tabindex="0"
+							aria-label="Project: SIPESAT SATPOL PP">
+							<div class="card-glow card-glow--purple" aria-hidden="true"></div>
+							<div class="card-header">
+								<div class="card-icon card-icon--purple" aria-hidden="true">
+									<svg
+										width="28"
+										height="28"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										aria-hidden="true">
+										<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+									</svg>
+								</div>
+								<span class="card-category" data-i18n="card.system"
+									>Sistem Informasi</span
+								>
+							</div>
+							<h3 class="card-title">SIPESAT</h3>
+							<p class="card-desc" data-i18n="project2.desc">
+								Sistem Pengelolaan Pesat untuk SATPOL PP — aplikasi manajemen
+								internal yang membantu pengelolaan data dan pelaporan
+								operasional secara efisien.
+							</p>
+							<div class="card-tags" role="list" aria-label="Technologies used">
+								<span class="tag" role="listitem">Backend</span>
+								<span class="tag" role="listitem">UI/UX</span>
+								<span class="tag" role="listitem">SATPOL PP</span>
+								<span class="tag" role="listitem">Web App</span>
+							</div>
+							<div class="card-footer">
+								<span class="card-status status--done" data-i18n="status.done"
+									>✓ Selesai</span
+								>
+							</div>
+						</article>
+
+						<!-- Project 3 -->
+						<article
+							class="project-card"
+							tabindex="0"
+							aria-label="Project: TIGERCEPOL SATPOL PP">
+							<div class="card-glow card-glow--teal" aria-hidden="true"></div>
+							<div class="card-header">
+								<div class="card-icon card-icon--teal" aria-hidden="true">
+									<svg
+										width="28"
+										height="28"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										aria-hidden="true">
+										<circle cx="12" cy="12" r="10" />
+										<polyline points="12 6 12 12 16 14" />
+									</svg>
+								</div>
+								<span class="card-category" data-i18n="card.system"
+									>Sistem Informasi</span
+								>
+							</div>
+							<h3 class="card-title">TIGERCEPOL</h3>
+							<p class="card-desc" data-i18n="project3.desc">
+								Sistem informasi terintegrasi untuk SATPOL PP — dirancang untuk
+								mempercepat alur kerja, pelaporan lapangan, dan koordinasi antar
+								unit secara digital.
+							</p>
+							<div class="card-tags" role="list" aria-label="Technologies used">
+								<span class="tag" role="listitem">Golang</span>
+								<span class="tag" role="listitem">UI/UX</span>
+								<span class="tag" role="listitem">SATPOL PP</span>
+								<span class="tag" role="listitem">Integration</span>
+							</div>
+							<div class="card-footer">
+								<span class="card-status status--done" data-i18n="status.done"
+									>✓ Selesai</span
+								>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills Section -->
+			<section
+				id="skills"
+				class="section skills-section"
+				aria-labelledby="skills-heading">
+				<div class="container">
+					<div class="section-header">
+						<span class="section-tag" data-i18n="skills.tag">Stack</span>
+						<h2
+							id="skills-heading"
+							class="section-title"
+							data-i18n="skills.title">
+							Keahlian &amp; Teknologi
+						</h2>
+						<p class="section-sub" data-i18n="skills.sub">
+							Tools dan teknologi yang saya gunakan sehari-hari.
+						</p>
+					</div>
+					<div class="skills-grid">
+						<div class="skill-group">
+							<h3 class="skill-group-title" data-i18n="skills.backend">
+								Backend
+							</h3>
+							<div class="skill-items">
+								<div class="skill-chip skill-chip--primary">
+									<span class="skill-icon">⚡</span> Golang
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🐘</span> PostgreSQL
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🔴</span> Redis
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🐳</span> Docker
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🔗</span> REST API
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">📡</span> gRPC
+								</div>
+							</div>
+						</div>
+						<div class="skill-group">
+							<h3 class="skill-group-title" data-i18n="skills.design">
+								UI/UX Design
+							</h3>
+							<div class="skill-items">
+								<div class="skill-chip skill-chip--purple">
+									<span class="skill-icon">🎨</span> Figma
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">✏️</span> Wireframing
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🖌️</span> Prototyping
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">👁️</span> User Research
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">📱</span> Responsive Design
+								</div>
+							</div>
+						</div>
+						<div class="skill-group">
+							<h3 class="skill-group-title" data-i18n="skills.infra">
+								DevOps &amp; Infra
+							</h3>
+							<div class="skill-items">
+								<div class="skill-chip">
+									<span class="skill-icon">☁️</span> Linux VPS
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🔧</span> Git
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🚀</span> CI/CD
+								</div>
+								<div class="skill-chip">
+									<span class="skill-icon">🌐</span> Nginx
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About Section -->
+			<section
+				id="about"
+				class="section about-section"
+				aria-labelledby="about-heading">
+				<div class="container about-inner">
+					<div class="about-visual" aria-hidden="true">
+						<div class="about-card-stack">
+							<div class="about-card card-back"></div>
+							<div class="about-card card-front">
+								<div class="about-avatar-wrap">
+									<img
+										src="/static/img/avatar.svg"
+										alt=""
+										width="120"
+										height="120" />
+								</div>
+								<div class="about-card-info">
+									<span class="about-card-name">Marsel Ruliana H.</span>
+									<span class="about-card-role" data-i18n="about.role"
+										>Backend &amp; UI/UX</span
+									>
+								</div>
+								<div class="about-card-badges">
+									<span class="badge-mini badge-go-mini">Go</span>
+									<span class="badge-mini badge-figma-mini">Figma</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="about-content">
+						<span class="section-tag" data-i18n="about.tag">Tentang Saya</span>
+						<h2
+							id="about-heading"
+							class="section-title"
+							data-i18n="about.title">
+							Dua Dunia, Satu Tujuan
+						</h2>
+						<p class="about-text" data-i18n="about.p1">
+							Saya adalah seorang
+							<strong>Backend Developer Golang</strong> sekaligus
+							<strong>UI/UX Designer</strong> — perpaduan langka yang
+							memungkinkan saya membangun produk yang tidak hanya berfungsi
+							dengan baik, tetapi juga terasa menyenangkan untuk digunakan.
+						</p>
+						<p class="about-text" data-i18n="about.p2">
+							Dengan pengalaman di proyek pemerintahan (TNI AL, SATPOL PP), saya
+							terbiasa bekerja dalam lingkungan yang menuntut keandalan tinggi,
+							keamanan data, dan antarmuka yang intuitif bahkan untuk pengguna
+							non-teknis.
+						</p>
+						<div class="about-values">
+							<div class="value-item">
+								<span class="value-icon" aria-hidden="true">🚀</span>
+								<div>
+									<strong data-i18n="value1.title">Performa Tinggi</strong>
+									<span data-i18n="value1.desc"
+										>Backend yang cepat &amp; scalable</span
+									>
+								</div>
+							</div>
+							<div class="value-item">
+								<span class="value-icon" aria-hidden="true">🔒</span>
+								<div>
+									<strong data-i18n="value2.title">Keamanan Utama</strong>
+									<span data-i18n="value2.desc"
+										>Kode yang aman &amp; terpercaya</span
+									>
+								</div>
+							</div>
+							<div class="value-item">
+								<span class="value-icon" aria-hidden="true">🎯</span>
+								<div>
+									<strong data-i18n="value3.title">Desain Berpusat User</strong>
+									<span data-i18n="value3.desc"
+										>UI yang intuitif &amp; accessible</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section
+				id="contact"
+				class="section contact-section"
+				aria-labelledby="contact-heading">
+				<div class="contact-glow" aria-hidden="true"></div>
+				<div class="container contact-inner">
+					<div class="section-header">
+						<span class="section-tag" data-i18n="contact.tag">Kontak</span>
+						<h2
+							id="contact-heading"
+							class="section-title"
+							data-i18n="contact.title">
+							Mari Berkolaborasi
+						</h2>
+						<p class="section-sub" data-i18n="contact.sub">
+							Punya proyek menarik? Saya siap membantu mewujudkannya.
+						</p>
+					</div>
+					<div class="contact-layout">
+						<div class="contact-info">
+							<a
+								href="mailto:marsellrulianaa@gmail.com"
+								class="contact-link"
+								aria-label="Email Marsel">
+								<div class="contact-icon" aria-hidden="true">
+									<svg
+										width="22"
+										height="22"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round">
+										<rect x="2" y="4" width="20" height="16" rx="2" />
+										<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+									</svg>
+								</div>
+								<div>
+									<span class="contact-label" data-i18n="contact.email.label"
+										>Email</span
+									>
+									<span class="contact-value">marsellrulianaa@gmail.com</span>
+								</div>
+							</a>
+							<a
+								href="https://www.linkedin.com/in/marsellrulianaa"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="contact-link"
+								aria-label="LinkedIn Marsel">
+								<div class="contact-icon" aria-hidden="true">
+									<svg
+										width="22"
+										height="22"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round">
+										<path
+											d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+										<rect x="2" y="9" width="4" height="12" />
+										<circle cx="4" cy="4" r="2" />
+									</svg>
+								</div>
+								<div>
+									<span class="contact-label">LinkedIn</span>
+									<span class="contact-value">marsellrulianaa</span>
+								</div>
+							</a>
+							<a
+								href="https://wa.me/6285175209039"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="contact-link"
+								aria-label="WhatsApp Marsel">
+								<div class="contact-icon" aria-hidden="true">
+									<svg
+										width="22"
+										height="22"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round">
+										<path
+											d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+									</svg>
+								</div>
+								<div>
+									<span class="contact-label">WhatsApp</span>
+									<span class="contact-value">+62 851-7520-9039</span>
+								</div>
+							</a>
+						</div>
+
+						<form
+							id="contactForm"
+							class="contact-form"
+							novalidate
+							aria-label="Contact form">
+							<div
+								class="flash-message"
+								id="flashMessage"
+								role="alert"
+								aria-live="polite"
+								aria-atomic="true"
+								hidden></div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="name" data-i18n="form.name">Nama</label>
+									<input
+										type="text"
+										id="name"
+										name="name"
+										autocomplete="name"
+										required
+										placeholder="John Doe"
+										aria-required="true" />
+									<span class="field-error" id="nameError" role="alert"></span>
+								</div>
+								<div class="form-group">
+									<label for="email" data-i18n="form.email">Email</label>
+									<input
+										type="email"
+										id="email"
+										name="email"
+										autocomplete="email"
+										required
+										placeholder="john@example.com"
+										aria-required="true" />
+									<span class="field-error" id="emailError" role="alert"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="message" data-i18n="form.message">Pesan</label>
+								<textarea
+									id="message"
+									name="message"
+									rows="5"
+									required
+									placeholder="Halo Marsel, saya ingin berdiskusi mengenai..."
+									aria-required="true"></textarea>
+								<span class="field-error" id="messageError" role="alert"></span>
+							</div>
+							<button
+								type="submit"
+								class="btn btn-primary btn-submit"
+								id="submitBtn">
+								<span class="btn-text" data-i18n="form.submit"
+									>Kirim Pesan</span
+								>
+								<span class="btn-loading" aria-hidden="true" hidden>
+									<svg
+										class="spinner"
+										width="18"
+										height="18"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2.5">
+										<circle cx="12" cy="12" r="10" stroke-opacity=".25" />
+										<path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round" />
+									</svg>
+									<span data-i18n="form.sending">Mengirim...</span>
+								</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer" role="contentinfo">
+			<div class="container footer-inner">
+				<span class="footer-copy">
+					&copy; <span id="year"></span> Marsel Ruliana Hermawan.
+					<span data-i18n="footer.rights">All rights reserved.</span>
+				</span>
+				<span class="footer-stack" data-i18n="footer.built"
+					>Dibangun dengan Go + ♥</span
+				>
+			</div>
+		</footer>
+
+		<script src="/static/js/main.js" defer></script>
+	</body>
+</html>

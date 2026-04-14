@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141928"/>
+      <stop offset="100%" stop-color="#1c2338"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <clipPath id="circle">
+      <circle cx="140" cy="140" r="140"/>
+    </clipPath>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="140" cy="140" r="140" fill="url(#bg)"/>
+  <!-- Body -->
+  <ellipse cx="140" cy="220" rx="70" ry="50" fill="url(#accent)" opacity="0.8" clip-path="url(#circle)"/>
+  <!-- Head -->
+  <circle cx="140" cy="110" r="55" fill="#2d3a55"/>
+  <!-- Face highlight -->
+  <circle cx="140" cy="108" r="52" fill="#334155"/>
+  <!-- Eyes -->
+  <circle cx="122" cy="104" r="7" fill="url(#accent)"/>
+  <circle cx="158" cy="104" r="7" fill="url(#accent)"/>
+  <!-- Eye pupils -->
+  <circle cx="124" cy="105" r="3.5" fill="#0a0d14"/>
+  <circle cx="160" cy="105" r="3.5" fill="#0a0d14"/>
+  <!-- Smile -->
+  <path d="M124 126 Q140 138 156 126" stroke="url(#accent)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Hair -->
+  <ellipse cx="140" cy="68" rx="52" ry="28" fill="#1e293b"/>
+  <ellipse cx="100" cy="88" rx="18" ry="30" fill="#1e293b"/>
+  <ellipse cx="180" cy="88" rx="18" ry="30" fill="#1e293b"/>
+  <!-- Border ring -->
+  <circle cx="140" cy="140" r="138" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.4"/>
+  <!-- Initials fallback text -->
+  <text x="140" y="195" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="url(#accent)" text-anchor="middle" opacity="0.7">MRH</text>
+</svg>
